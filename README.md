@@ -49,5 +49,4 @@ Seeds: gate phase 8001-8103 (exploratory); all confirmatory analyses use fresh s
 
 ## Licence
 
-Shiu et al.'s `model.py` / `utils.py`: MIT (see `engine/shiu_code/LICENSE`). Licence for the rest of this repository:
-to be added by the author.
+Shiu et al.'s `model.py` / `utils.py`: MIT (see `engine/shiu_code/LICENSE`). Everything else: MIT (see `LICENSE`).
