@@ -40,6 +40,7 @@ python ../scripts/verify_release.py     # re-runs a subset of stored results; mu
 | `e2_e3.py e3`, `e3b_alln.py` | class-level and antennal-lobe ablations | Fig. 1c |
 | `e1_ignition_map.py`, `e1c_phase.py` | which stimuli ignite the network | Fig. 2a |
 | `e4_meanfield.py` | wiring-only mean-field prediction of attractor membership | Sec. 4.3 |
+| `e4b_composition.py` | membership by cell class, simulated vs predicted | Fig. 4 |
 | `e6_prospective.py predict` / `simulate` | prospective test of the core-drive predictor (predictions frozen before simulation) | Fig. 2b |
 | `e5_fix.py`, `e5c_sign_fix.py`, `e7_global_fixes.py` | adaptation, targeted re-signing, global changes | Fig. 3 |
 | `e8_visual.py` | looming-sensitive visual input (LC4, LPLC2) | Sec. 4.2 |

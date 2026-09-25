@@ -1,0 +1,181 @@
+{
+ "n_sim": 8083,
+ "n_pred": 10615,
+ "rows": [
+  {
+   "cls": "Kenyon_Cell",
+   "simulated": 3334,
+   "predicted": 4106,
+   "both": 3334,
+   "recall": 1.0
+  },
+  {
+   "cls": "central",
+   "simulated": 2398,
+   "predicted": 2850,
+   "both": 2099,
+   "recall": 0.8753127606338615
+  },
+  {
+   "cls": "olfactory",
+   "simulated": 343,
+   "predicted": 739,
+   "both": 343,
+   "recall": 1.0
+  },
+  {
+   "cls": "optic_lobe_intrinsic",
+   "simulated": 36,
+   "predicted": 580,
+   "both": 27,
+   "recall": 0.75
+  },
+  {
+   "cls": "ALPN",
+   "simulated": 549,
+   "predicted": 569,
+   "both": 543,
+   "recall": 0.9890710382513661
+  },
+  {
+   "cls": "LHLN",
+   "simulated": 453,
+   "predicted": 457,
+   "both": 445,
+   "recall": 0.9823399558498896
+  },
+  {
+   "cls": "ALLN",
+   "simulated": 358,
+   "predicted": 388,
+   "both": 355,
+   "recall": 0.9916201117318436
+  },
+  {
+   "cls": "DAN",
+   "simulated": 140,
+   "predicted": 248,
+   "both": 139,
+   "recall": 0.9928571428571429
+  },
+  {
+   "cls": "CX",
+   "simulated": 47,
+   "predicted": 189,
+   "both": 44,
+   "recall": 0.9361702127659575
+  },
+  {
+   "cls": "descending",
+   "simulated": 141,
+   "predicted": 145,
+   "both": 104,
+   "recall": 0.7375886524822695
+  },
+  {
+   "cls": "MBON",
+   "simulated": 64,
+   "predicted": 78,
+   "both": 63,
+   "recall": 0.984375
+  },
+  {
+   "cls": "hygrosensory",
+   "simulated": 54,
+   "predicted": 63,
+   "both": 54,
+   "recall": 1.0
+  },
+  {
+   "cls": "visual_centrifugal",
+   "simulated": 48,
+   "predicted": 46,
+   "both": 34,
+   "recall": 0.7083333333333334
+  },
+  {
+   "cls": "visual_projection",
+   "simulated": 20,
+   "predicted": 21,
+   "both": 11,
+   "recall": 0.55
+  },
+  {
+   "cls": "thermosensory",
+   "simulated": 28,
+   "predicted": 29,
+   "both": 28,
+   "recall": 1.0
+  },
+  {
+   "cls": "LHCENT",
+   "simulated": 23,
+   "predicted": 25,
+   "both": 23,
+   "recall": 1.0
+  },
+  {
+   "cls": "brain_motor_neuron",
+   "simulated": 3,
+   "predicted": 18,
+   "both": 3,
+   "recall": 1.0
+  },
+  {
+   "cls": "ALIN",
+   "simulated": 13,
+   "predicted": 14,
+   "both": 13,
+   "recall": 1.0
+  },
+  {
+   "cls": "ALON",
+   "simulated": 13,
+   "predicted": 13,
+   "both": 13,
+   "recall": 1.0
+  },
+  {
+   "cls": "bilateral",
+   "simulated": 4,
+   "predicted": 11,
+   "both": 4,
+   "recall": 1.0
+  },
+  {
+   "cls": "AN",
+   "simulated": 5,
+   "predicted": 8,
+   "both": 5,
+   "recall": 1.0
+  },
+  {
+   "cls": "optic",
+   "simulated": 3,
+   "predicted": 6,
+   "both": 3,
+   "recall": 1.0
+  },
+  {
+   "cls": "unknown_sensory",
+   "simulated": 0,
+   "predicted": 5,
+   "both": 0,
+   "recall": null
+  },
+  {
+   "cls": "MBIN",
+   "simulated": 4,
+   "predicted": 4,
+   "both": 4,
+   "recall": 1.0
+  },
+  {
+   "cls": "mAL",
+   "simulated": 2,
+   "predicted": 3,
+   "both": 2,
+   "recall": 1.0
+  }
+ ]
+}

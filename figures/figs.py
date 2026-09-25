@@ -162,7 +162,31 @@ def fig3():
     fig.savefig(os.path.join(OUT, "fig3.pdf")); fig.savefig(os.path.join(OUT, "fig3.png"), dpi=200)
 
 
+def fig4():
+    d = J("e4b_composition.json")
+    rows = [r for r in d["rows"] if r["cls"] not in ("central", "unannotated")][:10]
+    labels = [r["cls"].replace("_", " ") for r in rows]
+    sim = np.array([r["simulated"] for r in rows]); pred = np.array([r["predicted"] for r in rows])
+    fig, ax = plt.subplots(figsize=(4.6, 2.9))
+    y = np.arange(len(rows))[::-1]
+    h = 0.36
+    ax.barh(y + h / 2 + 0.02, sim, height=h, color=BLUE, label="simulated (>= 50% of 19 ignited runs)")
+    ax.barh(y - h / 2 - 0.02, pred, height=h, color=ORANGE, label="mean-field prediction (wiring only)")
+    for yi, r in zip(y, rows):
+        if r["recall"] is not None:
+            ax.text(max(r["simulated"], r["predicted"]) + 60, yi, "recall %.2f" % r["recall"], va="center", fontsize=6.2,
+                    color=INK2)
+    ax.set_yticks(y); ax.set_yticklabels(labels, fontsize=6.8)
+    ax.set_xlabel("neurons in the self-sustained state")
+    ax.set_xlim(0, max(pred.max(), sim.max()) * 1.25)
+    ax.grid(axis="y", visible=False)
+    ax.legend(loc="lower right", fontsize=6.3, handlelength=1.2)
+    ax.set_title("Membership by cell class", loc="left", fontsize=8.5)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "fig4.pdf")); fig.savefig(os.path.join(OUT, "fig4.png"), dpi=200)
+
+
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
-    fig1(); fig2(); fig3()
+    fig1(); fig2(); fig3(); fig4()
     print("ok")
