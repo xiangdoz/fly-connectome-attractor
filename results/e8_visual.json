@@ -1,0 +1,391 @@
+{
+ "sched": [
+  [
+   "empty",
+   100
+  ],
+  [
+   "stim",
+   1000
+  ],
+  [
+   "s0",
+   250
+  ],
+  [
+   "s1",
+   250
+  ],
+  [
+   "s2",
+   250
+  ],
+  [
+   "s3",
+   250
+  ]
+ ],
+ "rows": [
+  {
+   "type": "LC4",
+   "hz": 50,
+   "seed": 8261,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 328
+  },
+  {
+   "type": "LC4",
+   "hz": 50,
+   "seed": 8262,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 341
+  },
+  {
+   "type": "LC4",
+   "hz": 50,
+   "seed": 8263,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 291
+  },
+  {
+   "type": "LC4",
+   "hz": 50,
+   "seed": 8264,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 325
+  },
+  {
+   "type": "LC4",
+   "hz": 50,
+   "seed": 8265,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 292
+  },
+  {
+   "type": "LC4",
+   "hz": 100,
+   "seed": 8261,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 495
+  },
+  {
+   "type": "LC4",
+   "hz": 100,
+   "seed": 8262,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 478
+  },
+  {
+   "type": "LC4",
+   "hz": 100,
+   "seed": 8263,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 474
+  },
+  {
+   "type": "LC4",
+   "hz": 100,
+   "seed": 8264,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 484
+  },
+  {
+   "type": "LC4",
+   "hz": 100,
+   "seed": 8265,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 496
+  },
+  {
+   "type": "LC4",
+   "hz": 150,
+   "seed": 8261,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 606
+  },
+  {
+   "type": "LC4",
+   "hz": 150,
+   "seed": 8262,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 559
+  },
+  {
+   "type": "LC4",
+   "hz": 150,
+   "seed": 8263,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 590
+  },
+  {
+   "type": "LC4",
+   "hz": 150,
+   "seed": 8264,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 599
+  },
+  {
+   "type": "LC4",
+   "hz": 150,
+   "seed": 8265,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 583
+  },
+  {
+   "type": "LC4",
+   "hz": 200,
+   "seed": 8261,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 669
+  },
+  {
+   "type": "LC4",
+   "hz": 200,
+   "seed": 8262,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 701
+  },
+  {
+   "type": "LC4",
+   "hz": 200,
+   "seed": 8263,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 655
+  },
+  {
+   "type": "LC4",
+   "hz": 200,
+   "seed": 8264,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 662
+  },
+  {
+   "type": "LC4",
+   "hz": 200,
+   "seed": 8265,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 677
+  },
+  {
+   "type": "LPLC2",
+   "hz": 50,
+   "seed": 8261,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 573
+  },
+  {
+   "type": "LPLC2",
+   "hz": 50,
+   "seed": 8262,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 633
+  },
+  {
+   "type": "LPLC2",
+   "hz": 50,
+   "seed": 8263,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 566
+  },
+  {
+   "type": "LPLC2",
+   "hz": 50,
+   "seed": 8264,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 576
+  },
+  {
+   "type": "LPLC2",
+   "hz": 50,
+   "seed": 8265,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 572
+  },
+  {
+   "type": "LPLC2",
+   "hz": 100,
+   "seed": 8261,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 816
+  },
+  {
+   "type": "LPLC2",
+   "hz": 100,
+   "seed": 8262,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 789
+  },
+  {
+   "type": "LPLC2",
+   "hz": 100,
+   "seed": 8263,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 814
+  },
+  {
+   "type": "LPLC2",
+   "hz": 100,
+   "seed": 8264,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 821
+  },
+  {
+   "type": "LPLC2",
+   "hz": 100,
+   "seed": 8265,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 797
+  },
+  {
+   "type": "LPLC2",
+   "hz": 150,
+   "seed": 8261,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 1037
+  },
+  {
+   "type": "LPLC2",
+   "hz": 150,
+   "seed": 8262,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 1087
+  },
+  {
+   "type": "LPLC2",
+   "hz": 150,
+   "seed": 8263,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 1041
+  },
+  {
+   "type": "LPLC2",
+   "hz": 150,
+   "seed": 8264,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 1057
+  },
+  {
+   "type": "LPLC2",
+   "hz": 150,
+   "seed": 8265,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 1084
+  },
+  {
+   "type": "LPLC2",
+   "hz": 200,
+   "seed": 8261,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 1307
+  },
+  {
+   "type": "LPLC2",
+   "hz": 200,
+   "seed": 8262,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 1404
+  },
+  {
+   "type": "LPLC2",
+   "hz": 200,
+   "seed": 8263,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 1309
+  },
+  {
+   "type": "LPLC2",
+   "hz": 200,
+   "seed": 8264,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 1312
+  },
+  {
+   "type": "LPLC2",
+   "hz": 200,
+   "seed": 8265,
+   "active_last": 0,
+   "ignited": false,
+   "jaccard_vs_E1": null,
+   "active_during": 1329
+  }
+ ],
+ "minutes": 18.118184153238932
+}
