@@ -1,0 +1,190 @@
+{
+ "seeds": [
+  8221,
+  8222,
+  8223,
+  8224,
+  8225
+ ],
+ "rows": [
+  {
+   "cond": "intact",
+   "n": 0,
+   "ignited": 5,
+   "active_last": [
+    8101,
+    8129,
+    8099,
+    8084,
+    8121
+   ]
+  },
+  {
+   "cond": "ALLN ACH",
+   "n": 43,
+   "ignited": 5,
+   "active_last": [
+    7783,
+    7702,
+    7680,
+    7730,
+    7663
+   ]
+  },
+  {
+   "cond": "ALLN GABA",
+   "n": 113,
+   "ignited": 5,
+   "active_last": [
+    10043,
+    10077,
+    10073,
+    10055,
+    10053
+   ]
+  },
+  {
+   "cond": "ALLN GLUT",
+   "n": 97,
+   "ignited": 5,
+   "active_last": [
+    8238,
+    8214,
+    8222,
+    8191,
+    8247
+   ]
+  },
+  {
+   "cond": "ALLN other/unknown nt",
+   "n": 176,
+   "ignited": 0,
+   "active_last": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "cond": "ALLN type lLN1_bc",
+   "n": 30,
+   "ignited": 5,
+   "active_last": [
+    6174,
+    6201,
+    6029,
+    6160,
+    6170
+   ]
+  },
+  {
+   "cond": "ALLN type lLN2X12",
+   "n": 13,
+   "ignited": 5,
+   "active_last": [
+    7690,
+    7722,
+    7714,
+    7717,
+    7685
+   ]
+  },
+  {
+   "cond": "ALLN type lLN2P_a",
+   "n": 13,
+   "ignited": 5,
+   "active_last": [
+    8127,
+    8204,
+    8112,
+    8107,
+    8116
+   ]
+  },
+  {
+   "cond": "ALLN type lLN2P_b",
+   "n": 12,
+   "ignited": 5,
+   "active_last": [
+    7714,
+    7703,
+    7713,
+    7677,
+    7681
+   ]
+  },
+  {
+   "cond": "ALLN type CB1141",
+   "n": 12,
+   "ignited": 5,
+   "active_last": [
+    8136,
+    8068,
+    8084,
+    8102,
+    8132
+   ]
+  },
+  {
+   "cond": "ALLN type CB1824",
+   "n": 10,
+   "ignited": 5,
+   "active_last": [
+    8098,
+    8107,
+    8091,
+    8068,
+    8066
+   ]
+  },
+  {
+   "cond": "ALLN type lLN2P_c",
+   "n": 9,
+   "ignited": 5,
+   "active_last": [
+    8423,
+    8330,
+    8396,
+    8357,
+    8384
+   ]
+  },
+  {
+   "cond": "ALLN type CB1686",
+   "n": 8,
+   "ignited": 5,
+   "active_last": [
+    8077,
+    8062,
+    8109,
+    8088,
+    8085
+   ]
+  }
+ ],
+ "reach": [
+  {
+   "hop": 1,
+   "alln_reached": 20,
+   "total_reached": 664
+  },
+  {
+   "hop": 2,
+   "alln_reached": 400,
+   "total_reached": 17398
+  },
+  {
+   "hop": 3,
+   "alln_reached": 429,
+   "total_reached": 98819
+  },
+  {
+   "hop": 4,
+   "alln_reached": 429,
+   "total_reached": 132379
+  }
+ ],
+ "minutes": 36.76257178783417
+}

@@ -1,0 +1,64 @@
+{
+ "sweep": [
+  {
+   "drive": 0.2,
+   "active_during": 142,
+   "persistent": 0,
+   "iters": 48
+  },
+  {
+   "drive": 0.4,
+   "active_during": 210,
+   "persistent": 0,
+   "iters": 55
+  },
+  {
+   "drive": 0.6,
+   "active_during": 474,
+   "persistent": 34,
+   "iters": 400
+  },
+  {
+   "drive": 0.8,
+   "active_during": 475,
+   "persistent": 35,
+   "iters": 400
+  },
+  {
+   "drive": 1.0,
+   "active_during": 489,
+   "persistent": 35,
+   "iters": 400
+  },
+  {
+   "drive": 1.2,
+   "active_during": 520,
+   "persistent": 35,
+   "iters": 400
+  },
+  {
+   "drive": 1.6,
+   "active_during": 10846,
+   "persistent": 10625,
+   "iters": 400
+  },
+  {
+   "drive": 2.0,
+   "active_during": 10907,
+   "persistent": 10615,
+   "iters": 400
+  }
+ ],
+ "pred_size": 35,
+ "overlap": {
+  "gate_screen_gap(LB3 1.2, seeds 8001-8005, exploratory)": {
+   "precision": 0.9714285714285714,
+   "recall": 0.003989673785496362,
+   "jaccard": 0.003989205678751613,
+   "n_pred": 35,
+   "n_true": 8522,
+   "random_jaccard_mean": 0.00046888428867742954,
+   "random_jaccard_p99": 0.0009369529218363145
+  }
+ }
+}

@@ -1,0 +1,3 @@
+results/** -text
+*.npz binary
+*.npy binary
