@@ -1,13 +1,19 @@
-# A hidden self-sustained state in the whole-brain *Drosophila* connectome model
+# Screening uncertain neurotransmitter annotations in a whole-brain *Drosophila* connectome model
 
-Code and results for the paper *Wiring predicts and explains a hidden self-sustained state in a whole-brain
-connectome model of Drosophila*.
+Code and results for the paper *Screening uncertain neurotransmitter annotations reveals and removes a hidden attractor
+in a whole-brain connectome model of Drosophila*.
 
 The leaky integrate-and-fire model of Shiu et al. (2024, *Nature*), built on the FlyWire v783 connectome, is bistable:
-driving enough sugar gustatory receptor neurons together switches the network into a state in which about 8,100
-neurons keep firing for at least 10 s without input. This repository contains the simulator, every experiment script,
-the raw results behind every number and figure in the paper, and the plans with pass criteria that were written
-before the corresponding runs (`prereg/`).
+driving enough sugar receptor neurons, or in many cases a single olfactory glomerulus, switches the network into a
+state in which about 8,100 neurons keep firing for at least 10 s without input. The state rests on the sign given to
+antennal-lobe local neurons that have no neuron-level transmitter call. The repository contains:
+
+- a wiring-only screen (`scripts/e4_meanfield.py`, `scripts/e14_screen.py`) that predicts the persistent set with a
+  mean-field fixed point and ranks the neurons of uncertain annotation inside it by their first-order effect on the
+  leading eigenvalue of the signed wiring;
+- the simulator (an exact, batched re-implementation of Shiu et al.'s Brian2 model) and every experiment script;
+- the raw results behind every number and figure in the paper;
+- the plans with pass criteria written before the corresponding runs (`prereg/`).
 
 ## Layout
 
