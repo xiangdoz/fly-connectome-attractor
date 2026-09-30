@@ -37,3 +37,9 @@
 - Pre-set criterion ("screening works"): top-45 includes >= 50% core cells AND re-signing top-45 gives 0/6 ignitions
   AND the random-45 controls ignite in at least half of their runs. Reported either way.
 - E14 file fix (before any E14 result was used): P must be results/e4_pred_set_drive2.0.npy (10,615 cells, the set used in the paper); e4_pred_set.npy holds a 35-cell low-drive set. First rank run on the wrong file discarded.
+
+## E15 (written before running; POST HOC, wiring only): end-to-end wiring-only pipeline and its cost
+- (a) Timing on this CPU: mean-field fixed point for LB3 at 200 Hz (-> persistent set P) + eigenvalue-sensitivity ranking.
+- (b) Replace the ablation-defined 176-cell core in the E6 drive score by the screen's top 66 (wiring only). Freeze the
+  threshold on E1c exactly as in E6, apply to the 42 E6 sets, compare with E6 outcomes (already known -> post hoc;
+  reported as such, not as a prospective result). Also AUC on E1c.

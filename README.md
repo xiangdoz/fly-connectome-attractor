@@ -54,6 +54,7 @@ python ../scripts/verify_release.py     # re-runs a subset of stored results; mu
 | `e8_visual.py` | looming-sensitive visual input (LC4, LPLC2) | Sec. 4.2 |
 | `e13_olfactory.py` | single ORNs, single glomeruli and all ORNs, original vs corrected model | Sec. 4.2, 4.7 |
 | `e9_other_stimuli.py` | bitter, low-salt, JO-C/E, JO-F and all gustatory neurons | Discussion |
+| `e15_pipeline.py` | end-to-end screen timing; drive score onto the screen's top 66 (post hoc) | Sec. 4.5, 4.6 |
 | `e10_fix_stress.py` | stress test of the corrected model | Sec. 4.7 |
 | `e12_partial_resign.py` | re-signing only part of the core (random subsets, two evidence rules) | Sec. 4.7, Fig. 5c |
 | `e11_spectrum.py` | leading eigenvalue of the attractor sub-network, original vs corrected vs random | Sec. 4.4 |
