@@ -1,0 +1,180 @@
+{
+ "rows": [
+  {
+   "stim": "LB3 120 Hz",
+   "seed": 8281,
+   "active_last": 0,
+   "active_stim": 579,
+   "ignited": false
+  },
+  {
+   "stim": "LB3 120 Hz",
+   "seed": 8282,
+   "active_last": 0,
+   "active_stim": 586,
+   "ignited": false
+  },
+  {
+   "stim": "LB3 120 Hz",
+   "seed": 8283,
+   "active_last": 0,
+   "active_stim": 591,
+   "ignited": false
+  },
+  {
+   "stim": "LB3 120 Hz",
+   "seed": 8284,
+   "active_last": 0,
+   "active_stim": 602,
+   "ignited": false
+  },
+  {
+   "stim": "LB3 120 Hz",
+   "seed": 8285,
+   "active_last": 0,
+   "active_stim": 603,
+   "ignited": false
+  },
+  {
+   "stim": "LB3 200 Hz",
+   "seed": 8281,
+   "active_last": 0,
+   "active_stim": 643,
+   "ignited": false
+  },
+  {
+   "stim": "LB3 200 Hz",
+   "seed": 8282,
+   "active_last": 0,
+   "active_stim": 676,
+   "ignited": false
+  },
+  {
+   "stim": "LB3 200 Hz",
+   "seed": 8283,
+   "active_last": 0,
+   "active_stim": 668,
+   "ignited": false
+  },
+  {
+   "stim": "LB3 200 Hz",
+   "seed": 8284,
+   "active_last": 0,
+   "active_stim": 661,
+   "ignited": false
+  },
+  {
+   "stim": "LB3 200 Hz",
+   "seed": 8285,
+   "active_last": 0,
+   "active_stim": 651,
+   "ignited": false
+  },
+  {
+   "stim": "all sugar GRNs 200 Hz",
+   "seed": 8281,
+   "active_last": 0,
+   "active_stim": 658,
+   "ignited": false
+  },
+  {
+   "stim": "all sugar GRNs 200 Hz",
+   "seed": 8282,
+   "active_last": 0,
+   "active_stim": 654,
+   "ignited": false
+  },
+  {
+   "stim": "all sugar GRNs 200 Hz",
+   "seed": 8283,
+   "active_last": 0,
+   "active_stim": 672,
+   "ignited": false
+  },
+  {
+   "stim": "all sugar GRNs 200 Hz",
+   "seed": 8284,
+   "active_last": 0,
+   "active_stim": 650,
+   "ignited": false
+  },
+  {
+   "stim": "all sugar GRNs 200 Hz",
+   "seed": 8285,
+   "active_last": 0,
+   "active_stim": 679,
+   "ignited": false
+  },
+  {
+   "stim": "all gustatory 200 Hz",
+   "seed": 8281,
+   "active_last": 0,
+   "active_stim": 1837,
+   "ignited": false
+  },
+  {
+   "stim": "all gustatory 200 Hz",
+   "seed": 8282,
+   "active_last": 0,
+   "active_stim": 1804,
+   "ignited": false
+  },
+  {
+   "stim": "all gustatory 200 Hz",
+   "seed": 8283,
+   "active_last": 0,
+   "active_stim": 1802,
+   "ignited": false
+  },
+  {
+   "stim": "all gustatory 200 Hz",
+   "seed": 8284,
+   "active_last": 0,
+   "active_stim": 1817,
+   "ignited": false
+  },
+  {
+   "stim": "all gustatory 200 Hz",
+   "seed": 8285,
+   "active_last": 0,
+   "active_stim": 1793,
+   "ignited": false
+  },
+  {
+   "stim": "JO-C+JO-E 200 Hz",
+   "seed": 8281,
+   "active_last": 0,
+   "active_stim": 663,
+   "ignited": false
+  },
+  {
+   "stim": "JO-C+JO-E 200 Hz",
+   "seed": 8282,
+   "active_last": 0,
+   "active_stim": 664,
+   "ignited": false
+  },
+  {
+   "stim": "JO-C+JO-E 200 Hz",
+   "seed": 8283,
+   "active_last": 0,
+   "active_stim": 647,
+   "ignited": false
+  },
+  {
+   "stim": "JO-C+JO-E 200 Hz",
+   "seed": 8284,
+   "active_last": 0,
+   "active_stim": 660,
+   "ignited": false
+  },
+  {
+   "stim": "JO-C+JO-E 200 Hz",
+   "seed": 8285,
+   "active_last": 0,
+   "active_stim": 648,
+   "ignited": false
+  }
+ ],
+ "minutes": 11.499909281730652
+}
