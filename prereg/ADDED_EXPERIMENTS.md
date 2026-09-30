@@ -43,3 +43,11 @@
 - (b) Replace the ablation-defined 176-cell core in the E6 drive score by the screen's top 66 (wiring only). Freeze the
   threshold on E1c exactly as in E6, apply to the 42 E6 sets, compare with E6 outcomes (already known -> post hoc;
   reported as such, not as a prospective result). Also AUC on E1c.
+
+## E16 (written before running; wiring only): robustness of the screen
+- Vary the input used to compute the mean-field persistent set P: LB3 200 Hz (reference), all sugar/water GRNs 200 Hz,
+  all ORNs 30 Hz, all ORNs 100 Hz, one glomerulus (ORN_VM3) 100 Hz. Vary the membership threshold: 1 Hz (reference), 5 Hz.
+- For each: |P|, number of candidates, fraction of core cells in the top 45 / top 66, overlap of the top 66 with E14's top 66.
+- Second round: run the same screen on the corrected wiring (150 unknown-nt ALLN inhibitory), LB3 200 Hz and all ORNs 100 Hz;
+  report |P|, leading eigenvalue and the classes of the top 20 candidates (what, if anything, the screen flags next).
+- Criterion ("robust"): top 45 >= 90% core cells in every variant of the original wiring. Reported either way.

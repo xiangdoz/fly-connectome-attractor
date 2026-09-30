@@ -1,0 +1,173 @@
+{
+ "rows": [
+  {
+   "input": "LB3 200 Hz",
+   "thresh": 1.0,
+   "n_P": 10615,
+   "lam": 2.979228802395538,
+   "n_cand": 376,
+   "core_top45": 1.0,
+   "core_top66": 1.0,
+   "overlap_ref66": 66
+  },
+  {
+   "input": "LB3 200 Hz",
+   "thresh": 5.0,
+   "n_P": 10607,
+   "lam": 2.979228800947005,
+   "n_cand": 376,
+   "core_top45": 1.0,
+   "core_top66": 1.0,
+   "overlap_ref66": 66
+  },
+  {
+   "input": "all sugar GRNs 200 Hz",
+   "thresh": 1.0,
+   "n_P": 10615,
+   "lam": 2.979228774906601,
+   "n_cand": 376,
+   "core_top45": 1.0,
+   "core_top66": 1.0,
+   "overlap_ref66": 66
+  },
+  {
+   "input": "all sugar GRNs 200 Hz",
+   "thresh": 5.0,
+   "n_P": 10607,
+   "lam": 2.979228800947024,
+   "n_cand": 376,
+   "core_top45": 1.0,
+   "core_top66": 1.0,
+   "overlap_ref66": 66
+  },
+  {
+   "input": "all ORNs 30 Hz",
+   "thresh": 1.0,
+   "n_P": 10580,
+   "lam": 2.9792287733860627,
+   "n_cand": 375,
+   "core_top45": 1.0,
+   "core_top66": 1.0,
+   "overlap_ref66": 66
+  },
+  {
+   "input": "all ORNs 30 Hz",
+   "thresh": 5.0,
+   "n_P": 10570,
+   "lam": 2.9792287734797562,
+   "n_cand": 375,
+   "core_top45": 1.0,
+   "core_top66": 1.0,
+   "overlap_ref66": 66
+  },
+  {
+   "input": "all ORNs 100 Hz",
+   "thresh": 1.0,
+   "n_P": 10579,
+   "lam": 2.9792287733834817,
+   "n_cand": 375,
+   "core_top45": 1.0,
+   "core_top66": 1.0,
+   "overlap_ref66": 66
+  },
+  {
+   "input": "all ORNs 100 Hz",
+   "thresh": 5.0,
+   "n_P": 10575,
+   "lam": 2.97922877362031,
+   "n_cand": 375,
+   "core_top45": 1.0,
+   "core_top66": 1.0,
+   "overlap_ref66": 66
+  },
+  {
+   "input": "ORN_VM3 100 Hz",
+   "thresh": 1.0,
+   "n_P": 10575,
+   "lam": 2.9792287697318227,
+   "n_cand": 375,
+   "core_top45": 1.0,
+   "core_top66": 1.0,
+   "overlap_ref66": 66
+  },
+  {
+   "input": "ORN_VM3 100 Hz",
+   "thresh": 5.0,
+   "n_P": 10569,
+   "lam": 2.979228769571621,
+   "n_cand": 375,
+   "core_top45": 1.0,
+   "core_top66": 1.0,
+   "overlap_ref66": 66
+  }
+ ],
+ "second_round": [
+  {
+   "input": "LB3 200 Hz",
+   "n_P": 698,
+   "lam": 0.38063043776128075,
+   "n_cand": 20,
+   "top20_classes": {
+    "NA": 10,
+    "CX": 5,
+    "brain_motor_neuron": 3,
+    "MBON": 1,
+    "ALIN": 1
+   },
+   "top20_types": {
+    "FB4Y": 5,
+    "SMP588": 2,
+    "MBON05": 1,
+    "LAL185": 1,
+    "DNg13": 1,
+    "ATL032": 1,
+    "DNg31": 1,
+    "MN10": 1
+   },
+   "P_classes": {
+    "NA": 597,
+    "CX": 30,
+    "DAN": 19,
+    "MBON": 18,
+    "brain_motor_neuron": 12,
+    "AN": 5,
+    "ALPN": 3,
+    "ALLN": 3
+   }
+  },
+  {
+   "input": "all ORNs 100 Hz",
+   "n_P": 872,
+   "lam": 0.3904833189408163,
+   "n_cand": 25,
+   "top20_classes": {
+    "NA": 7,
+    "optic_lobe_intrinsic": 6,
+    "CX": 5,
+    "MBON": 1,
+    "brain_motor_neuron": 1
+   },
+   "top20_types": {
+    "FB4Y": 5,
+    "Lawf2": 4,
+    "SMP588": 2,
+    "Lai": 2,
+    "MBON05": 1,
+    "LAL185": 1,
+    "DNg13": 1,
+    "DNg31": 1
+   },
+   "P_classes": {
+    "NA": 605,
+    "optic_lobe_intrinsic": 177,
+    "CX": 32,
+    "DAN": 19,
+    "MBON": 18,
+    "AN": 5,
+    "brain_motor_neuron": 4,
+    "ALPN": 3
+   }
+  }
+ ],
+ "minutes": 3.774106812477112
+}
