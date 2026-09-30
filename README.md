@@ -44,6 +44,7 @@ python ../scripts/verify_release.py     # re-runs a subset of stored results; mu
 | `e6_prospective.py predict` / `simulate` | prospective test of the core-drive predictor (predictions frozen before simulation) | Fig. 2b |
 | `e5_fix.py`, `e5c_sign_fix.py`, `e7_global_fixes.py` | adaptation, targeted re-signing, global changes | Fig. 3 |
 | `e8_visual.py` | looming-sensitive visual input (LC4, LPLC2) | Sec. 4.2 |
+| `e9_other_stimuli.py` | bitter, low-salt, JO-C/E, JO-F and all gustatory neurons | Discussion |
 | `g4_localize.py`, `g1b_precision.py` | exploratory gate analyses (reported in the plans) | -- |
 
 Seeds: gate phase 8001-8103 (exploratory); all confirmatory analyses use fresh seeds from 8201 on.

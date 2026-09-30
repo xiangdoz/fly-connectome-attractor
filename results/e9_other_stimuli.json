@@ -1,0 +1,301 @@
+{
+ "sched": [
+  [
+   "empty",
+   100
+  ],
+  [
+   "stim",
+   1000
+  ],
+  [
+   "s0",
+   250
+  ],
+  [
+   "s1",
+   250
+  ],
+  [
+   "s2",
+   250
+  ],
+  [
+   "s3",
+   250
+  ]
+ ],
+ "rows": [
+  {
+   "set": "ALL_BITTER",
+   "n": 65,
+   "hz": 100,
+   "seed": 8271,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "ALL_BITTER",
+   "n": 65,
+   "hz": 100,
+   "seed": 8272,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "ALL_BITTER",
+   "n": 65,
+   "hz": 100,
+   "seed": 8273,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "ALL_BITTER",
+   "n": 65,
+   "hz": 200,
+   "seed": 8271,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "ALL_BITTER",
+   "n": 65,
+   "hz": 200,
+   "seed": 8272,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "ALL_BITTER",
+   "n": 65,
+   "hz": 200,
+   "seed": 8273,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "JO_CE",
+   "n": 221,
+   "hz": 100,
+   "seed": 8271,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "JO_CE",
+   "n": 221,
+   "hz": 100,
+   "seed": 8272,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "JO_CE",
+   "n": 221,
+   "hz": 100,
+   "seed": 8273,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "JO_CE",
+   "n": 221,
+   "hz": 200,
+   "seed": 8271,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "JO_CE",
+   "n": 221,
+   "hz": 200,
+   "seed": 8272,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "JO_CE",
+   "n": 221,
+   "hz": 200,
+   "seed": 8273,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "JO_F",
+   "n": 106,
+   "hz": 100,
+   "seed": 8271,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "JO_F",
+   "n": 106,
+   "hz": 100,
+   "seed": 8272,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "JO_F",
+   "n": 106,
+   "hz": 100,
+   "seed": 8273,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "JO_F",
+   "n": 106,
+   "hz": 200,
+   "seed": 8271,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "JO_F",
+   "n": 106,
+   "hz": 200,
+   "seed": 8272,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "JO_F",
+   "n": 106,
+   "hz": 200,
+   "seed": 8273,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "ALL_LOWSALT",
+   "n": 19,
+   "hz": 100,
+   "seed": 8271,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 2.0
+  },
+  {
+   "set": "ALL_LOWSALT",
+   "n": 19,
+   "hz": 100,
+   "seed": 8272,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 3.0
+  },
+  {
+   "set": "ALL_LOWSALT",
+   "n": 19,
+   "hz": 100,
+   "seed": 8273,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 1.0
+  },
+  {
+   "set": "ALL_LOWSALT",
+   "n": 19,
+   "hz": 200,
+   "seed": 8271,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 3.0
+  },
+  {
+   "set": "ALL_LOWSALT",
+   "n": 19,
+   "hz": 200,
+   "seed": 8272,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 3.0
+  },
+  {
+   "set": "ALL_LOWSALT",
+   "n": 19,
+   "hz": 200,
+   "seed": 8273,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 3.0
+  },
+  {
+   "set": "ALL_GUSTATORY",
+   "n": 334,
+   "hz": 100,
+   "seed": 8271,
+   "active_last": 8120,
+   "ignited": true,
+   "mn9_stim_hz": 3.0
+  },
+  {
+   "set": "ALL_GUSTATORY",
+   "n": 334,
+   "hz": 100,
+   "seed": 8272,
+   "active_last": 0,
+   "ignited": false,
+   "mn9_stim_hz": 17.0
+  },
+  {
+   "set": "ALL_GUSTATORY",
+   "n": 334,
+   "hz": 100,
+   "seed": 8273,
+   "active_last": 8079,
+   "ignited": true,
+   "mn9_stim_hz": 14.0
+  },
+  {
+   "set": "ALL_GUSTATORY",
+   "n": 334,
+   "hz": 200,
+   "seed": 8271,
+   "active_last": 8054,
+   "ignited": true,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "ALL_GUSTATORY",
+   "n": 334,
+   "hz": 200,
+   "seed": 8272,
+   "active_last": 8076,
+   "ignited": true,
+   "mn9_stim_hz": 0.0
+  },
+  {
+   "set": "ALL_GUSTATORY",
+   "n": 334,
+   "hz": 200,
+   "seed": 8273,
+   "active_last": 8113,
+   "ignited": true,
+   "mn9_stim_hz": 0.0
+  }
+ ],
+ "minutes": 41.51025348504384
+}
