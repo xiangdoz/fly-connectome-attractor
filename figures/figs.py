@@ -11,7 +11,7 @@ import numpy as np
 from matplotlib.colors import LinearSegmentedColormap
 
 R = os.path.join("..", "results")
-OUT = "."
+OUT = "figs"
 BLUE, ORANGE, AQUA = "#2a78d6", "#eb6834", "#1baf7a"
 INK, INK2, GRID = "#0b0b0b", "#52514e", "#e1e0d9"
 SEQ = LinearSegmentedColormap.from_list("seqblue", ["#f4f8fd", "#cde2fb", "#86b6ef", "#3987e5", "#1c5cab", "#0d366b"])
@@ -186,7 +186,67 @@ def fig4():
     fig.savefig(os.path.join(OUT, "fig4.pdf")); fig.savefig(os.path.join(OUT, "fig4.png"), dpi=200)
 
 
+def fig5():
+    rk = J("e14_rank.json")
+    fig, ax = plt.subplots(1, 3, figsize=(7.2, 2.4), gridspec_kw=dict(width_ratios=[1.15, 1, 1]))
+    # (a) predicted eigenvalue drop by rank, core vs other candidates
+    drop = -np.array(rk["pred_drop"])
+    is_core = np.array(J("e14_core_flags.json")["is_core"])
+    n = 150
+    x = np.arange(1, n + 1)
+    ax[0].scatter(x[is_core[:n]], drop[:n][is_core[:n]], s=7, color=ORANGE, linewidths=0, label="core cell")
+    ax[0].scatter(x[~is_core[:n]], drop[:n][~is_core[:n]], s=7, color=BLUE, linewidths=0, label="other candidate")
+    ax[0].set_yscale("log")
+    ax[0].set_xlabel("rank among 376 uncertain candidates")
+    ax[0].set_ylabel("predicted eigenvalue drop")
+    ax[0].legend(loc="upper right", fontsize=6.3, handletextpad=0.2)
+    ax[0].set_title("a  wiring-only ranking", loc="left", fontsize=8.5)
+    # (b) exact leading eigenvalue after re-signing k cells
+    ks = [23, 45, 90]
+    base = J("e14_baselines.json")["out-weight within P"]
+    rnd = J("e14_random_eig.json")
+    ax[1].plot(ks, [rk["top%d_exact_lam" % k] for k in ks], "-o", ms=3.5, color=ORANGE, label="eigen-sensitivity top-k")
+    ax[1].plot(ks, [base[str(k)][1] for k in ks], "--o", ms=3, color=AQUA, label="out-weight top-k")
+    for k in ks:
+        ax[1].scatter([k] * 3, rnd[str(k)], s=9, color=BLUE, linewidths=0, zorder=3)
+    ax[1].scatter([], [], s=9, color=BLUE, label="random k (3 draws)")
+    ax[1].axhline(rk["lam"], color=INK2, lw=0.8, ls=":")
+    ax[1].text(92, rk["lam"] + 0.05, "original", ha="right", va="bottom", fontsize=6.5, color=INK2)
+    ax[1].set_ylim(0, 3.4)
+    ax[1].set_xticks(ks)
+    ax[1].set_xlabel("cells re-signed inhibitory (k)")
+    ax[1].set_ylabel(r"leading eigenvalue of $\tau W_{PP}$")
+    ax[1].legend(loc="lower left", fontsize=6.0, handlelength=1.2)
+    ax[1].set_title("b  exact eigenvalue", loc="left", fontsize=8.5)
+    # (c) ignition in simulation
+    sim = {c["cond"]: c for c in J("e14_simulate.json")["conds"]}
+    e12 = {c["cond"]: c for c in J("e12_partial_resign.json")["conds"]}
+    top = [sim["top-%d" % k]["ignited"] / 6 for k in ks]
+    rr = [[sim["random-%d #%d" % (k, i)]["ignited"] / 6 for i in (1, 2, 3)] for k in ks]
+    ax[2].plot(ks, top, "-o", ms=3.5, color=ORANGE, label="eigen-sensitivity top-k")
+    for k, v in zip(ks, rr):
+        ax[2].scatter(np.array([k] * 3) + np.array([-2, 0, 2]), v, s=9, color=BLUE, linewidths=0, zorder=3)
+    ax[2].scatter([], [], s=9, color=BLUE, label="random uncertain k")
+    for k in (23, 45):
+        v = [e12["random k=%d #%d" % (k, i)]["ignited"] / 6 for i in (1, 2, 3)]
+        ax[2].scatter(np.array([k] * 3) + np.array([-2, 0, 2]), v, s=12, facecolors="none", edgecolors=AQUA, linewidths=0.8)
+    ax[2].scatter([], [], s=12, facecolors="none", edgecolors=AQUA, label="random k of the core")
+    ax[2].set_ylim(-0.08, 1.08)
+    ax[2].set_xticks(ks)
+    ax[2].set_xlabel("cells re-signed inhibitory (k)")
+    ax[2].set_ylabel("fraction of runs ignited")
+    ax[2].legend(loc="center right", fontsize=6.0, handlelength=1.2)
+    ax[2].set_title("c  ignition in simulation", loc="left", fontsize=8.5)
+    fig.tight_layout()
+    fig.savefig(os.path.join(OUT, "fig5.pdf")); fig.savefig(os.path.join(OUT, "fig5.png"), dpi=200)
+
+
 if __name__ == "__main__":
+    import sys
     os.makedirs(OUT, exist_ok=True)
-    fig1(); fig2(); fig3(); fig4()
+    if len(sys.argv) > 1:
+        for f in sys.argv[1:]:
+            globals()[f]()
+    else:
+        fig1(); fig2(); fig3(); fig4(); fig5()
     print("ok")

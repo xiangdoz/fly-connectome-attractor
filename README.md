@@ -28,6 +28,7 @@ in `engine/data/` (see `data/README.md`). Every script runs with `engine/` as th
 ```
 cd engine
 python ../scripts/verify_release.py     # re-runs a subset of stored results; must print ALL IDENTICAL
+# note: eigenvalues (e11, e14) use ARPACK with a random start vector and reproduce to ~1e-14, not bit for bit
 ```
 
 ## Experiments
@@ -40,12 +41,15 @@ python ../scripts/verify_release.py     # re-runs a subset of stored results; mu
 | `e2_e3.py e3`, `e3b_alln.py` | class-level and antennal-lobe ablations | Fig. 1c |
 | `e1_ignition_map.py`, `e1c_phase.py` | which stimuli ignite the network | Fig. 2a |
 | `e4_meanfield.py` | wiring-only mean-field prediction of attractor membership | Sec. 4.3 |
+| `e14_screen.py rank` / `extras` / `simulate` | annotation-uncertainty screen: eigenvalue-sensitivity ranking of uncertain cells in the mean-field set, baselines, and validation by simulation | Sec. 4.5, Fig. 5 |
 | `e4b_composition.py` | membership by cell class, simulated vs predicted | Fig. 4 |
-| `e6_prospective.py predict` / `simulate` | prospective test of the core-drive predictor (predictions frozen before simulation) | Fig. 2b |
+| `e6_prospective.py predict` / `simulate` | prospective test of the core-drive predictor (predictions frozen before simulation) | Sec. 4.6, Fig. 2b |
 | `e5_fix.py`, `e5c_sign_fix.py`, `e7_global_fixes.py` | adaptation, targeted re-signing, global changes | Fig. 3 |
 | `e8_visual.py` | looming-sensitive visual input (LC4, LPLC2) | Sec. 4.2 |
+| `e13_olfactory.py` | single ORNs, single glomeruli and all ORNs, original vs corrected model | Sec. 4.2, 4.7 |
 | `e9_other_stimuli.py` | bitter, low-salt, JO-C/E, JO-F and all gustatory neurons | Discussion |
-| `e10_fix_stress.py` | stress test of the corrected model | Sec. 4.6 |
+| `e10_fix_stress.py` | stress test of the corrected model | Sec. 4.7 |
+| `e12_partial_resign.py` | re-signing only part of the core (random subsets, two evidence rules) | Sec. 4.7, Fig. 5c |
 | `e11_spectrum.py` | leading eigenvalue of the attractor sub-network, original vs corrected vs random | Sec. 4.4 |
 | `g4_localize.py`, `g1b_precision.py` | exploratory gate analyses (reported in the plans) | -- |
 

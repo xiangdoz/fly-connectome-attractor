@@ -1,0 +1,604 @@
+{
+ "models": {
+  "original": [
+   {
+    "stim": "single ORN_VM6m 20 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM6m 20 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VL2p 20 Hz",
+    "seed": 8301,
+    "active_stim": 7860,
+    "active_last": 8125,
+    "ignited": true
+   },
+   {
+    "stim": "single ORN_VL2p 20 Hz",
+    "seed": 8302,
+    "active_stim": 8052,
+    "active_last": 8114,
+    "ignited": true
+   },
+   {
+    "stim": "single ORN_VM2 20 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM2 20 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM3 20 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM3 20 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_DA3 20 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_DA3 20 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM6m 100 Hz",
+    "seed": 8301,
+    "active_stim": 5,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM6m 100 Hz",
+    "seed": 8302,
+    "active_stim": 5,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VL2p 100 Hz",
+    "seed": 8301,
+    "active_stim": 8151,
+    "active_last": 8088,
+    "ignited": true
+   },
+   {
+    "stim": "single ORN_VL2p 100 Hz",
+    "seed": 8302,
+    "active_stim": 8163,
+    "active_last": 8144,
+    "ignited": true
+   },
+   {
+    "stim": "single ORN_VM2 100 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM2 100 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM3 100 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM3 100 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_DA3 100 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_DA3 100 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM6m (33) 30 Hz",
+    "seed": 8301,
+    "active_stim": 8211,
+    "active_last": 8104,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_VM6m (33) 30 Hz",
+    "seed": 8302,
+    "active_stim": 8199,
+    "active_last": 8119,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_VL2p (27) 30 Hz",
+    "seed": 8301,
+    "active_stim": 8185,
+    "active_last": 8173,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_VL2p (27) 30 Hz",
+    "seed": 8302,
+    "active_stim": 8195,
+    "active_last": 8106,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_VM2 (37) 30 Hz",
+    "seed": 8301,
+    "active_stim": 44,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM2 (37) 30 Hz",
+    "seed": 8302,
+    "active_stim": 44,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM3 (37) 30 Hz",
+    "seed": 8301,
+    "active_stim": 8207,
+    "active_last": 8111,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_VM3 (37) 30 Hz",
+    "seed": 8302,
+    "active_stim": 8191,
+    "active_last": 8087,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_DA3 (30) 30 Hz",
+    "seed": 8301,
+    "active_stim": 30,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_DA3 (30) 30 Hz",
+    "seed": 8302,
+    "active_stim": 30,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM6m (33) 100 Hz",
+    "seed": 8301,
+    "active_stim": 8245,
+    "active_last": 8095,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_VM6m (33) 100 Hz",
+    "seed": 8302,
+    "active_stim": 8204,
+    "active_last": 8108,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_VL2p (27) 100 Hz",
+    "seed": 8301,
+    "active_stim": 8191,
+    "active_last": 8081,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_VL2p (27) 100 Hz",
+    "seed": 8302,
+    "active_stim": 8207,
+    "active_last": 8110,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_VM2 (37) 100 Hz",
+    "seed": 8301,
+    "active_stim": 8238,
+    "active_last": 8172,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_VM2 (37) 100 Hz",
+    "seed": 8302,
+    "active_stim": 8267,
+    "active_last": 8120,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_VM3 (37) 100 Hz",
+    "seed": 8301,
+    "active_stim": 8209,
+    "active_last": 8086,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_VM3 (37) 100 Hz",
+    "seed": 8302,
+    "active_stim": 8213,
+    "active_last": 8158,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_DA3 (30) 100 Hz",
+    "seed": 8301,
+    "active_stim": 8150,
+    "active_last": 8156,
+    "ignited": true
+   },
+   {
+    "stim": "type ORN_DA3 (30) 100 Hz",
+    "seed": 8302,
+    "active_stim": 8206,
+    "active_last": 8085,
+    "ignited": true
+   },
+   {
+    "stim": "all 2279 ORNs 30 Hz",
+    "seed": 8301,
+    "active_stim": 10444,
+    "active_last": 8109,
+    "ignited": true
+   },
+   {
+    "stim": "all 2279 ORNs 30 Hz",
+    "seed": 8302,
+    "active_stim": 10461,
+    "active_last": 8099,
+    "ignited": true
+   }
+  ],
+  "corrected": [
+   {
+    "stim": "single ORN_VM6m 20 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM6m 20 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VL2p 20 Hz",
+    "seed": 8301,
+    "active_stim": 7,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VL2p 20 Hz",
+    "seed": 8302,
+    "active_stim": 7,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM2 20 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM2 20 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM3 20 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM3 20 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_DA3 20 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_DA3 20 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM6m 100 Hz",
+    "seed": 8301,
+    "active_stim": 5,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM6m 100 Hz",
+    "seed": 8302,
+    "active_stim": 5,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VL2p 100 Hz",
+    "seed": 8301,
+    "active_stim": 10,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VL2p 100 Hz",
+    "seed": 8302,
+    "active_stim": 10,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM2 100 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM2 100 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM3 100 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_VM3 100 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_DA3 100 Hz",
+    "seed": 8301,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "single ORN_DA3 100 Hz",
+    "seed": 8302,
+    "active_stim": 1,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM6m (33) 30 Hz",
+    "seed": 8301,
+    "active_stim": 97,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM6m (33) 30 Hz",
+    "seed": 8302,
+    "active_stim": 104,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VL2p (27) 30 Hz",
+    "seed": 8301,
+    "active_stim": 66,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VL2p (27) 30 Hz",
+    "seed": 8302,
+    "active_stim": 62,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM2 (37) 30 Hz",
+    "seed": 8301,
+    "active_stim": 44,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM2 (37) 30 Hz",
+    "seed": 8302,
+    "active_stim": 44,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM3 (37) 30 Hz",
+    "seed": 8301,
+    "active_stim": 46,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM3 (37) 30 Hz",
+    "seed": 8302,
+    "active_stim": 48,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_DA3 (30) 30 Hz",
+    "seed": 8301,
+    "active_stim": 30,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_DA3 (30) 30 Hz",
+    "seed": 8302,
+    "active_stim": 30,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM6m (33) 100 Hz",
+    "seed": 8301,
+    "active_stim": 786,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM6m (33) 100 Hz",
+    "seed": 8302,
+    "active_stim": 238,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VL2p (27) 100 Hz",
+    "seed": 8301,
+    "active_stim": 163,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VL2p (27) 100 Hz",
+    "seed": 8302,
+    "active_stim": 558,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM2 (37) 100 Hz",
+    "seed": 8301,
+    "active_stim": 562,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM2 (37) 100 Hz",
+    "seed": 8302,
+    "active_stim": 214,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM3 (37) 100 Hz",
+    "seed": 8301,
+    "active_stim": 62,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_VM3 (37) 100 Hz",
+    "seed": 8302,
+    "active_stim": 62,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_DA3 (30) 100 Hz",
+    "seed": 8301,
+    "active_stim": 39,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "type ORN_DA3 (30) 100 Hz",
+    "seed": 8302,
+    "active_stim": 39,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "all 2279 ORNs 30 Hz",
+    "seed": 8301,
+    "active_stim": 3392,
+    "active_last": 0,
+    "ignited": false
+   },
+   {
+    "stim": "all 2279 ORNs 30 Hz",
+    "seed": 8302,
+    "active_stim": 3425,
+    "active_last": 0,
+    "ignited": false
+   }
+  ]
+ },
+ "pick_types": [
+  "ORN_VM6m",
+  "ORN_VL2p",
+  "ORN_VM2",
+  "ORN_VM3",
+  "ORN_DA3"
+ ],
+ "minutes": 39.959944887955984
+}
