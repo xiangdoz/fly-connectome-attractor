@@ -55,6 +55,7 @@ python ../scripts/verify_release.py     # re-runs a subset of stored results; mu
 | `e13_olfactory.py` | single ORNs, single glomeruli and all ORNs, original vs corrected model | Sec. 4.2, 4.7 |
 | `e9_other_stimuli.py` | bitter, low-salt, JO-C/E, JO-F and all gustatory neurons | Discussion |
 | `e16_screen_robustness.py` | screen robustness to the input and threshold used for the persistent set; second round on the corrected wiring | Sec. 4.5, 4.7 |
+| `e17_conventions.py`, `e17b_c1_screen.py` | three brain-wide sign conventions; screen with P from ORN input | Sec. 4.6, Table 2 |
 | `e15_pipeline.py` | end-to-end screen timing; drive score onto the screen's top 66 (post hoc) | Sec. 4.5, 4.6 |
 | `e10_fix_stress.py` | stress test of the corrected model | Sec. 4.7 |
 | `e12_partial_resign.py` | re-signing only part of the core (random subsets, two evidence rules) | Sec. 4.7, Fig. 5c |

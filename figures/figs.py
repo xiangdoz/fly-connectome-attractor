@@ -84,9 +84,9 @@ def ignition_table():
 
 
 def fig1():
-    fig = plt.figure(figsize=(7.2, 3.5))
+    fig = plt.figure(figsize=(6.5, 3.6))
     # (a) persistence over 10 s
-    ax = fig.add_axes([0.085, 0.62, 0.30, 0.31])
+    ax = fig.add_axes([0.09, 0.62, 0.27, 0.31])
     e2 = J("e2_persistence.json")
     t = np.arange(1, 11) - 0.5                      # 1-s windows, plotted at their centres
     for a in e2["active"]:
@@ -97,14 +97,14 @@ def fig1():
         stays = r["active"][9] > 1000
         ax.plot(t3, r["active"][2:10], color=ORANGE if stays else BLUE, lw=1.1, ls="--" if stays else "-")
     ax.text(10, 7300, "LB3 at 120 Hz (5 seeds)", ha="right", va="top", fontsize=6.6, color=ORANGE)
-    ax.text(2.4, 1300, "LB3 at 80 Hz: 3 seeds stay (dashed),\n2 fall silent", ha="left", va="bottom", fontsize=6.6,
+    ax.text(2.3, 1300, "LB3 at 80 Hz: 3 seeds stay\n(dashed), 2 fall silent", ha="left", va="bottom", fontsize=6.6,
             color=BLUE)
     ax.set_ylim(-400, 9800); ax.set_xlim(0, 10.2)
     ax.set_xlabel("time after the input ends (s)")
     ax.set_ylabel("neurons > 1 Hz")
     title(ax, "a  activity without input")
     # (b) feeding output after the pulse
-    ax = fig.add_axes([0.085, 0.13, 0.30, 0.31])
+    ax = fig.add_axes([0.09, 0.13, 0.27, 0.31])
     rows = [r for r in J("g0_g2.json")["rows"] if r["tag"][0] == "G2"]
     s1s = sorted({r["tag"][1] for r in rows})
     rng = np.random.default_rng(0)
@@ -117,7 +117,7 @@ def fig1():
     ax.set_ylabel("MN9 rate, later\nsugar probe (Hz)")
     title(ax, "b  feeding output after the pulse")
     # (c) which inputs reach the state
-    ax = fig.add_axes([0.665, 0.13, 0.325, 0.80])
+    ax = fig.add_axes([0.665, 0.13, 0.33, 0.80])
     rows = ignition_table()
     rates = [20, 30, 50, 100, 150, 200]
     ys = np.arange(len(rows))[::-1].astype(float)
@@ -157,7 +157,7 @@ def fig1():
 
 
 def fig2():
-    fig, axs = plt.subplots(1, 3, figsize=(7.2, 2.75), gridspec_kw=dict(width_ratios=[1.25, 1.2, 0.95]))
+    fig, axs = plt.subplots(1, 3, figsize=(6.5, 2.65), gridspec_kw=dict(width_ratios=[1.25, 1.2, 0.95]))
     # (a) membership predicted from wiring vs simulated
     ax = axs[0]
     names = {"Kenyon_Cell": "Kenyon cells", "olfactory": "olfactory receptor", "optic_lobe_intrinsic": "optic lobe",
@@ -219,7 +219,7 @@ def fig2():
 
 def fig3():
     rk = J("e14_rank.json")
-    fig, ax = plt.subplots(1, 3, figsize=(7.2, 2.4), gridspec_kw=dict(width_ratios=[1.15, 1, 1]))
+    fig, ax = plt.subplots(1, 3, figsize=(6.5, 2.4), gridspec_kw=dict(width_ratios=[1.15, 1, 1]))
     drop = -np.array(rk["pred_drop"])
     is_core = np.array(J("e14_core_flags.json")["is_core"])
     n = 150
@@ -244,7 +244,7 @@ def fig3():
     ax[1].set_ylim(0, 3.4); ax[1].set_xticks(ks)
     ax[1].set_xlabel("cells re-signed (k)")
     ax[1].set_ylabel(r"$\lambda$ after re-signing")
-    ax[1].legend(loc="center right", bbox_to_anchor=(1.0, 0.47), fontsize=6.0, handlelength=1.2)
+    ax[1].legend(loc="center right", bbox_to_anchor=(1.02, 0.43), fontsize=6.0, handlelength=1.2)
     title(ax[1], "b  exact eigenvalue")
     sim = {c["cond"]: c for c in J("e14_simulate.json")["conds"]}
     e12 = {c["cond"]: c for c in J("e12_partial_resign.json")["conds"]}
@@ -261,16 +261,32 @@ def fig3():
     ax[2].set_ylim(-0.08, 1.08); ax[2].set_xticks(ks)
     ax[2].set_xlabel("cells re-signed (k)")
     ax[2].set_ylabel("runs ending in the state")
-    ax[2].legend(loc="center right", fontsize=6.0, handlelength=1.2)
+    ax[2].legend(loc="center right", bbox_to_anchor=(1.02, 0.62), fontsize=6.0, handlelength=1.2)
     title(ax[2], "c  simulation")
     fig.tight_layout()
     save(fig, "fig3")
 
 
 def fig4():
-    fig, axs = plt.subplots(1, 2, figsize=(6.4, 2.6), gridspec_kw=dict(width_ratios=[1.1, 1]))
-    # (a) prospective test
+    fig, axs = plt.subplots(1, 3, figsize=(6.5, 2.5), gridspec_kw=dict(width_ratios=[0.8, 1.1, 1]))
+    # (a) phase diagram on which the score was designed
     ax = axs[0]
+    rows = J("e1c_phase.json")["rows"]
+    ks = sorted({r["k"] for r in rows}); hz = sorted({r["hz"] for r in rows})
+    M = np.array([[np.mean([r["ignited"] for r in rows if r["k"] == k and r["hz"] == h]) for h in hz] for k in ks])
+    ax.imshow(M, cmap=SEQ, vmin=0, vmax=1, aspect="auto", origin="lower")
+    for i, k in enumerate(ks):
+        for j, h in enumerate(hz):
+            n = sum(r["ignited"] for r in rows if r["k"] == k and r["hz"] == h)
+            ax.text(j, i, "%d/3" % n, ha="center", va="center", fontsize=6.3, color="#ffffff" if M[i, j] > 0.5 else INK)
+    ax.set_xticks(range(len(hz))); ax.set_xticklabels(["%d" % h for h in hz])
+    ax.set_yticks(range(len(ks))); ax.set_yticklabels(ks)
+    ax.set_xlabel("rate (Hz)")
+    ax.set_ylabel("LB3 cells (random subset)")
+    ax.grid(False)
+    title(ax, "a  design runs")
+    # (b) prospective test
+    ax = axs[1]
     P = J("e6_predictions.json"); res = J("e6_result.json")
     th = P["threshold_core"]
     ign = np.array(res["ignited"]); sc = np.array([p["core_score"] for p in P["predictions"]])
@@ -288,9 +304,9 @@ def fig4():
     ax.set_xlabel("drive onto the core x rate")
     ax.set_ylabel("LB3 cells stimulated")
     ax.legend(loc="upper left", fontsize=6.0, handletextpad=0.2, borderaxespad=0.1)
-    title(ax, "a  frozen prediction: 37/42")
-    # (b) odour responses before and after the correction
-    ax = axs[1]
+    title(ax, "b  frozen prediction: 37/42")
+    # (c) odour responses before and after the correction
+    ax = axs[2]
     e13 = J("e13_olfactory.json")
     types = e13["pick_types"]
     conds = [("type %s" % t, 100) for t in types]
@@ -312,9 +328,45 @@ def fig4():
     ax.set_xlabel("glomerulus driven at 100 Hz")
     ax.set_ylabel("neurons active during odour")
     ax.legend(loc="upper left", fontsize=6.2, handletextpad=0.2, ncol=2, columnspacing=0.8)
-    title(ax, "b  odour responses after the correction")
+    title(ax, "c  odour responses")
     fig.tight_layout(w_pad=0.8)
     save(fig, "fig4")
+
+
+def fig0():
+    """Overview: what the screen takes, what it computes, what it returns and how it is checked."""
+    from matplotlib.patches import FancyBboxPatch
+    fig, ax = plt.subplots(figsize=(7.2, 2.0))
+    ax.set_xlim(0, 100); ax.set_ylim(0, 28); ax.axis("off")
+
+    def box(x, y, w, h, head, body, fc="#ffffff", ec=INK2):
+        ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.2,rounding_size=1.0", fc=fc, ec=ec, lw=0.8))
+        ax.text(x + 0.9, y + h - 1.0, head, fontsize=7.2, color=INK, va="top", ha="left", weight="bold")
+        ax.text(x + 0.9, y + h - 4.4, body, fontsize=6.4, color=INK2, va="top", ha="left", linespacing=1.3)
+
+    def arrow(x0, y0, x1, y1):
+        ax.annotate("", xy=(x1, y1), xytext=(x0, y0),
+                    arrowprops=dict(arrowstyle="-|>", color=INK2, lw=0.9, shrinkA=0, shrinkB=0))
+
+    top, h = 15.5, 11.5
+    xs = [0.5, 20.5, 40.5, 60.5, 80.5]
+    w = 17.5
+    box(xs[0], top, w, h, "Input", "signed wiring $W$;\n19,042 cells signed\nby convention", fc=PALE)
+    box(xs[1], top, w, h, "1  Mean field", "clamp, then release\nthe stimulus; cells\nthat persist form $P$")
+    box(xs[2], top, w, h, "2  Candidates", "excitatory cells\nof $P$ without a\ncall (376)")
+    box(xs[3], top, w, h, "3  Rank", r"by $\Delta\lambda_j$, first-order" "\n" r"change of the top" "\n" r"eigenvalue of $\tau W_{PP}$")
+    box(xs[4], top, w + 1.5, h, "Output", "annotations to\ncheck, in order\n(top 66: core)", fc="#fbe3d9", ec=ORANGE)
+    for a in range(4):
+        arrow(xs[a] + w + 0.5, top + h / 2, xs[a + 1] - 0.5, top + h / 2)
+    bh = 10.5
+    box(xs[1], 1, w, bh, "Membership", "$P$ vs. simulation:\nJaccard 0.70\n(random sets 0.06)")
+    box(xs[2], 1, w, bh, "Triggers", "stimulus drive onto\nthe core predicts\nignition (37/42)")
+    box(xs[3], 1, 2 * w + 4.5, bh, "Check by simulation",
+        "re-sign top 45: 0/6 runs ignite, MN9 unchanged\nre-sign 45 random candidates: 18/18 ignite\n21 s on one CPU; same top 66 in 10 variants")
+    arrow(xs[1] + w / 2, top - 0.4, xs[1] + w / 2, 1 + bh + 0.4)
+    arrow(xs[2] + w / 2, top - 0.4, xs[2] + w / 2, 1 + bh + 0.4)
+    arrow(xs[4] + w / 2, top - 0.4, xs[4] + w / 2, 1 + bh + 0.4)
+    save(fig, "fig0")
 
 
 def figS1():

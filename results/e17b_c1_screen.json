@@ -1,0 +1,66 @@
+{
+ "rows": [
+  {
+   "input": "all ORNs 30 Hz",
+   "n_P": 1966,
+   "P_classes": {
+    "NA": 1143,
+    "optic_lobe_intrinsic": 298,
+    "ALLN": 110,
+    "ALPN": 100,
+    "Kenyon_Cell": 97,
+    "LHLN": 75,
+    "CX": 48,
+    "DAN": 24
+   },
+   "lam": 0.9210304826751727,
+   "n_cand": 38,
+   "top20_classes": {
+    "ALLN": 10,
+    "brain_motor_neuron": 4,
+    "optic_lobe_intrinsic": 4,
+    "NA": 2
+   },
+   "top20_types": {
+    "lLN1_bc": 10,
+    "Lawf2": 3,
+    "CB0886": 2,
+    "DNge125": 1,
+    "DNp73": 1,
+    "CB0706": 1,
+    "CB4212": 1,
+    "Lai": 1
+   }
+  },
+  {
+   "input": "LB3 200 Hz",
+   "n_P": 819,
+   "P_classes": {
+    "NA": 701,
+    "CX": 32,
+    "DAN": 24,
+    "MBON": 17,
+    "brain_motor_neuron": 14,
+    "AN": 5,
+    "unknown_sensory": 5,
+    "LHCENT": 5
+   },
+   "lam": 0.410125847423296,
+   "n_cand": 10,
+   "top20_classes": {
+    "NA": 7,
+    "brain_motor_neuron": 3
+   },
+   "top20_types": {
+    "CB0886": 2,
+    "LAL185": 1,
+    "DNg13": 1,
+    "DNge103": 1,
+    "DNg39": 1,
+    "DNp73": 1,
+    "MN10": 1,
+    "DNge125": 1
+   }
+  }
+ ]
+}

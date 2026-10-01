@@ -51,3 +51,24 @@
 - Second round: run the same screen on the corrected wiring (150 unknown-nt ALLN inhibitory), LB3 200 Hz and all ORNs 100 Hz;
   report |P|, leading eigenvalue and the classes of the top 20 candidates (what, if anything, the screen flags next).
 - Criterion ("robust"): top 45 >= 90% core cells in every variant of the original wiring. Reported either way.
+
+## E17 (written before running): the screen and the attractor under alternative sign conventions (brain-wide)
+- Motivation: (i) does the screen work under other conventions; (ii) a principled, core-independent correction.
+  Observation that motivated C2 (descriptive, before E17): the screen's top 45 are 41 ALl1_dorsal hemilineage cells (28 lLN1_bc);
+  among the 162 ALl1_dorsal neurons WITH a neuron-level call, 112 GABA, 25 ACh, 22 5HT, 3 Glu. lLN1_bc synapse votes:
+  DA 0.28, 5HT 0.26, ACh 0.22, GABA 0.19, Glu 0.05.
+- Conventions, applied only to the 19,042 neurons without a neuron-level call (nt_type missing) unless stated:
+  C0 original; C1 fast-majority (inhibitory iff GABA+Glu synapse votes > ACh votes; DA/5HT/OA votes ignored);
+  C2 hemilineage imputation (sign of the majority neuron-level call among called neurons of the same hemilineage;
+     GABA/Glu -> inhibitory, others excitatory; no hemilineage or no called member -> keep C0 sign);
+  C3 flyer-style (all ALLN inhibitory unless called ACh; outputs of neurons called DA/5HT/OA set to zero, brain-wide).
+- For each: screen (|P|, lambda, top-10 candidate classes) for LB3 200 Hz; simulation on fresh seeds 8321-8322 with
+  LB3 120 Hz, all sugar GRNs 200 Hz, ORN_VM3 glomerulus 100 Hz, all ORNs 30 Hz (ignition); SHIU20 MN9 at 100/150/200 Hz on
+  seeds 8201-8203 vs the original (E1).
+- Pre-set reading: a convention "removes the attractor" if 0/8 ignitions; "keeps validated behaviour" if MN9 within 20%
+  at 100-200 Hz. Reported for every convention whatever the outcome.
+
+## E17b (written before running; post hoc diagnostic, wiring only): would the screen flag C1's residual?
+- Run the screen on the C1 wiring with P computed from all ORNs at 30 Hz (the input that ignited C1) and from LB3 200 Hz;
+  report |P|, lambda, class composition of P and of the top 20 candidates. Reported as a post-hoc check of the method's
+  dependence on the input used for P.
