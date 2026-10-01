@@ -22,15 +22,21 @@ SEQ = LinearSegmentedColormap.from_list("seqblue", ["#f4f8fd", "#cde2fb", "#86b6
 plt.rcParams.update({"font.size": 8, "axes.edgecolor": INK2, "axes.labelcolor": INK, "xtick.color": INK2,
                      "ytick.color": INK2, "text.color": INK, "axes.spines.top": False, "axes.spines.right": False,
                      "axes.grid": True, "grid.color": GRID, "grid.linewidth": 0.5, "axes.axisbelow": True,
-                     "legend.frameon": False, "pdf.fonttype": 42, "axes.titlesize": 8.5})
+                     "legend.frameon": False, "pdf.fonttype": 42, "axes.titlesize": 8.5,
+                     "font.family": "Arial", "grid.alpha": 0.7})
 
 
 def J(name):
     return json.load(open(os.path.join(R, name)))
 
 
-def title(ax, s):
-    ax.set_title(s, loc="left", fontsize=8.5)
+def title(ax, s, dx=-28):
+    """Panel letter in bold and a short title, as in Figure 1: title(ax, "a  some title")."""
+    letter, _, rest = s.partition("  ")
+    ax.annotate(letter, xy=(0, 1), xycoords="axes fraction", xytext=(dx, 7), textcoords="offset points",
+                fontsize=9.5, weight="bold", ha="left", va="bottom", annotation_clip=False)
+    ax.annotate(rest, xy=(0, 1), xycoords="axes fraction", xytext=(dx + 11, 7), textcoords="offset points",
+                fontsize=8.3, ha="left", va="bottom", annotation_clip=False)
 
 
 def save(fig, name):
@@ -102,7 +108,7 @@ def fig1():
     ax.set_ylim(-400, 9800); ax.set_xlim(0, 10.2)
     ax.set_xlabel("time after the input ends (s)")
     ax.set_ylabel("neurons > 1 Hz")
-    title(ax, "a  activity without input")
+    title(ax, "a  Activity without input")
     # (b) feeding output after the pulse
     ax = fig.add_axes([0.09, 0.13, 0.27, 0.31])
     rows = [r for r in J("g0_g2.json")["rows"] if r["tag"][0] == "G2"]
@@ -115,7 +121,7 @@ def fig1():
             color=INK, lw=1.4)
     ax.set_xlabel("rate of the first LB3 pulse (Hz)")
     ax.set_ylabel("MN9 rate, later\nsugar probe (Hz)")
-    title(ax, "b  feeding output after the pulse")
+    title(ax, "b  Feeding output afterwards")
     # (c) which inputs reach the state
     ax = fig.add_axes([0.665, 0.13, 0.33, 0.80])
     rows = ignition_table()
@@ -151,8 +157,7 @@ def fig1():
         ax.annotate(mod, xy=(0, ys[i] + 0.55), xycoords=("axes fraction", "data"), xytext=(-124, 0),
                     textcoords="offset points", fontsize=6.8, color=INK2, ha="left", va="bottom", style="italic",
                     annotation_clip=False)
-    ax.annotate("c  inputs that reach the state", xy=(0, 1), xycoords="axes fraction", xytext=(-124, 6),
-                textcoords="offset points", fontsize=8.5, ha="left", va="bottom", annotation_clip=False)
+    title(ax, "c  Inputs that reach the state", dx=-124)
     save(fig, "fig1")
 
 
@@ -230,7 +235,7 @@ def fig3():
     ax[0].set_xlabel("rank among 376 candidates")
     ax[0].set_ylabel(r"predicted drop of $\lambda$")
     ax[0].legend(loc="upper right", fontsize=6.3, handletextpad=0.2)
-    title(ax[0], "a  ranking from wiring")
+    title(ax[0], "a  Ranking from wiring")
     ks = [23, 45, 90]
     base = J("e14_baselines.json")["out-weight within P"]
     rnd = J("e14_random_eig.json")
@@ -245,7 +250,7 @@ def fig3():
     ax[1].set_xlabel("cells re-signed (k)")
     ax[1].set_ylabel(r"$\lambda$ after re-signing")
     ax[1].legend(loc="center right", bbox_to_anchor=(1.02, 0.43), fontsize=6.0, handlelength=1.2)
-    title(ax[1], "b  exact eigenvalue")
+    title(ax[1], "b  Exact eigenvalue")
     sim = {c["cond"]: c for c in J("e14_simulate.json")["conds"]}
     e12 = {c["cond"]: c for c in J("e12_partial_resign.json")["conds"]}
     ax[2].plot(ks, [sim["top-%d" % k]["ignited"] / 6 for k in ks], "-o", ms=3.5, color=ORANGE, label="top k by screen")
@@ -262,7 +267,7 @@ def fig3():
     ax[2].set_xlabel("cells re-signed (k)")
     ax[2].set_ylabel("runs ending in the state")
     ax[2].legend(loc="center right", bbox_to_anchor=(1.02, 0.62), fontsize=6.0, handlelength=1.2)
-    title(ax[2], "c  simulation")
+    title(ax[2], "c  Simulation")
     fig.tight_layout()
     save(fig, "fig3")
 
@@ -284,7 +289,7 @@ def fig4():
     ax.set_xlabel("rate (Hz)")
     ax.set_ylabel("LB3 cells (random subset)")
     ax.grid(False)
-    title(ax, "a  design runs")
+    title(ax, "a  Design runs")
     # (b) prospective test
     ax = axs[1]
     P = J("e6_predictions.json"); res = J("e6_result.json")
@@ -304,7 +309,7 @@ def fig4():
     ax.set_xlabel("drive onto the core x rate")
     ax.set_ylabel("LB3 cells stimulated")
     ax.legend(loc="upper left", fontsize=6.0, handletextpad=0.2, borderaxespad=0.1)
-    title(ax, "b  frozen prediction: 37/42")
+    title(ax, "b  Frozen prediction: 37/42")
     # (c) odour responses before and after the correction
     ax = axs[2]
     e13 = J("e13_olfactory.json")
@@ -328,7 +333,7 @@ def fig4():
     ax.set_xlabel("glomerulus driven at 100 Hz")
     ax.set_ylabel("neurons active during odour")
     ax.legend(loc="upper left", fontsize=6.2, handletextpad=0.2, ncol=2, columnspacing=0.8)
-    title(ax, "c  odour responses")
+    title(ax, "c  Odour responses")
     fig.tight_layout(w_pad=0.8)
     save(fig, "fig4")
 
