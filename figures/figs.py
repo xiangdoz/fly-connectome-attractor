@@ -2,7 +2,7 @@
 fig1 the hidden state and the inputs that reach it; fig2 wiring explains it; fig3 the screen; fig4 prediction and
 correction; figS1 (supplement) the LB3 subset phase diagram. Palette: blue #2a78d6, orange #eb6834, aqua #1baf7a,
 sequential blue ramp, ink #0b0b0b / #52514e, hairline grid #e1e0d9.  python figs.py [fig1 ...]  (cwd = paper/)
-The previous per-experiment layout is kept in figs_v1.py."""
+The previous per-experiment layout is kept in figs_v1.py; Figure 1 comes from fig0_build.py."""
 import json
 import os
 import sys
@@ -333,40 +333,7 @@ def fig4():
     save(fig, "fig4")
 
 
-def fig0():
-    """Overview: what the screen takes, what it computes, what it returns and how it is checked."""
-    from matplotlib.patches import FancyBboxPatch
-    fig, ax = plt.subplots(figsize=(7.2, 2.0))
-    ax.set_xlim(0, 100); ax.set_ylim(0, 28); ax.axis("off")
-
-    def box(x, y, w, h, head, body, fc="#ffffff", ec=INK2):
-        ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.2,rounding_size=1.0", fc=fc, ec=ec, lw=0.8))
-        ax.text(x + 0.9, y + h - 1.0, head, fontsize=7.2, color=INK, va="top", ha="left", weight="bold")
-        ax.text(x + 0.9, y + h - 4.4, body, fontsize=6.4, color=INK2, va="top", ha="left", linespacing=1.3)
-
-    def arrow(x0, y0, x1, y1):
-        ax.annotate("", xy=(x1, y1), xytext=(x0, y0),
-                    arrowprops=dict(arrowstyle="-|>", color=INK2, lw=0.9, shrinkA=0, shrinkB=0))
-
-    top, h = 15.5, 11.5
-    xs = [0.5, 20.5, 40.5, 60.5, 80.5]
-    w = 17.5
-    box(xs[0], top, w, h, "Input", "signed wiring $W$;\n19,042 cells signed\nby convention", fc=PALE)
-    box(xs[1], top, w, h, "1  Mean field", "clamp, then release\nthe stimulus; cells\nthat persist form $P$")
-    box(xs[2], top, w, h, "2  Candidates", "excitatory cells\nof $P$ without a\ncall (376)")
-    box(xs[3], top, w, h, "3  Rank", r"by $\Delta\lambda_j$, first-order" "\n" r"change of the top" "\n" r"eigenvalue of $\tau W_{PP}$")
-    box(xs[4], top, w + 1.5, h, "Output", "annotations to\ncheck, in order\n(top 66: core)", fc="#fbe3d9", ec=ORANGE)
-    for a in range(4):
-        arrow(xs[a] + w + 0.5, top + h / 2, xs[a + 1] - 0.5, top + h / 2)
-    bh = 10.5
-    box(xs[1], 1, w, bh, "Membership", "$P$ vs. simulation:\nJaccard 0.70\n(random sets 0.06)")
-    box(xs[2], 1, w, bh, "Triggers", "stimulus drive onto\nthe core predicts\nignition (37/42)")
-    box(xs[3], 1, 2 * w + 4.5, bh, "Check by simulation",
-        "re-sign top 45: 0/6 runs ignite, MN9 unchanged\nre-sign 45 random candidates: 18/18 ignite\n21 s on one CPU; same top 66 in 10 variants")
-    arrow(xs[1] + w / 2, top - 0.4, xs[1] + w / 2, 1 + bh + 0.4)
-    arrow(xs[2] + w / 2, top - 0.4, xs[2] + w / 2, 1 + bh + 0.4)
-    arrow(xs[4] + w / 2, top - 0.4, xs[4] + w / 2, 1 + bh + 0.4)
-    save(fig, "fig0")
+# Figure 1 (overview) is built by fig0_parts.py (data panels) and fig0_build.py (PowerPoint layout, PDF export).
 
 
 def figS1():
