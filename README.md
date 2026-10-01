@@ -39,28 +39,27 @@ python ../scripts/verify_release.py     # re-runs a subset of stored results; mu
 
 ## Experiments
 
+Sections, figures and tables refer to the paper. `figures/figs.py` writes `fig0` ... `fig4` for Figures 1-5
+(`fig0` = Figure 1, the overview).
+
 | script | what it does | paper |
 |---|---|---|
-| `g0_g2.py` | probe response vs first-pulse drive, 10 fresh seeds | Fig. 1a |
-| `g1_brian2.py`, `g1c_brian2_attractor.py` | matched-seed replication in Shiu et al.'s own Brian2 model | Methods |
-| `g3_recovery.py`, `e2_e3.py e2` | persistence of the state (2 s and 10 s without input) | Fig. 1b |
-| `e2_e3.py e3`, `e3b_alln.py` | class-level and antennal-lobe ablations | Fig. 1c |
-| `e1_ignition_map.py`, `e1c_phase.py` | which stimuli ignite the network | Fig. 2a |
-| `e4_meanfield.py` | wiring-only mean-field prediction of attractor membership | Sec. 4.3 |
-| `e14_screen.py rank` / `extras` / `simulate` | annotation-uncertainty screen: eigenvalue-sensitivity ranking of uncertain cells in the mean-field set, baselines, and validation by simulation | Sec. 4.5, Fig. 5 |
-| `e4b_composition.py` | membership by cell class, simulated vs predicted | Fig. 4 |
-| `e6_prospective.py predict` / `simulate` | prospective test of the core-drive predictor (predictions frozen before simulation) | Sec. 4.6, Fig. 2b |
-| `e5_fix.py`, `e5c_sign_fix.py`, `e7_global_fixes.py` | adaptation, targeted re-signing, global changes | Fig. 3 |
-| `e8_visual.py` | looming-sensitive visual input (LC4, LPLC2) | Sec. 4.2 |
-| `e13_olfactory.py` | single ORNs, single glomeruli and all ORNs, original vs corrected model | Sec. 4.2, 4.7 |
-| `e9_other_stimuli.py` | bitter, low-salt, JO-C/E, JO-F and all gustatory neurons | Discussion |
-| `e16_screen_robustness.py` | screen robustness to the input and threshold used for the persistent set; second round on the corrected wiring | Sec. 4.5, 4.7 |
+| `g1_brian2.py`, `g1c_brian2_attractor.py` | matched-seed replication in Shiu et al.'s own Brian2 model | Sec. 3 |
+| `g0_g2.py` | probe response vs first-pulse drive, 10 fresh seeds | Fig. 2b |
+| `g3_recovery.py`, `e2_e3.py e2` | persistence of the state (2 s and 10 s without input) | Fig. 2a |
+| `e1_ignition_map.py`, `e8_visual.py`, `e9_other_stimuli.py`, `e13_olfactory.py` | which inputs reach the state (taste, smell, Johnston's organ, vision) | Sec. 4.1, Fig. 2c |
+| `e4_meanfield.py`, `e4b_composition.py` | wiring-only mean-field prediction of attractor membership | Sec. 4.2, Fig. 3a |
+| `e2_e3.py e3`, `e3b_alln.py` | class-level and antennal-lobe ablations | Sec. 4.2, Fig. 3b |
+| `e11_spectrum.py` | leading eigenvalue of the attractor sub-network | Sec. 4.2, Fig. 3c |
+| `e14_screen.py rank` / `extras` / `simulate` | the annotation-uncertainty screen, baselines, and validation by simulation | Sec. 4.3, Fig. 4 |
+| `e16_screen_robustness.py` | robustness to the input and threshold used for the persistent set; second round on the corrected wiring | Sec. 4.3, 4.5 |
+| `e15_pipeline.py` | end-to-end timing; drive score onto the screen's top 66 (post hoc) | Sec. 4.3, 4.4 |
+| `e1c_phase.py`, `e6_prospective.py predict` / `simulate` | design runs and prospective test of the drive score (predictions frozen before simulation) | Sec. 4.4, Fig. 5a-b |
+| `e5_fix.py`, `e5c_sign_fix.py`, `e7_global_fixes.py` | adaptation, targeted re-signing, global changes | Sec. 4.5, Table 1 |
+| `e10_fix_stress.py`, `e13_olfactory.py` | stress test of the corrected model; odour responses | Sec. 4.5, Fig. 5c |
+| `e12_partial_resign.py` | re-signing only part of the core | Sec. 4.5, Fig. 4c |
 | `e17_conventions.py`, `e17b_c1_screen.py` | three brain-wide sign conventions; screen with P from ORN input | Sec. 4.6, Table 2 |
-| `e15_pipeline.py` | end-to-end screen timing; drive score onto the screen's top 66 (post hoc) | Sec. 4.5, 4.6 |
-| `e10_fix_stress.py` | stress test of the corrected model | Sec. 4.7 |
-| `e12_partial_resign.py` | re-signing only part of the core (random subsets, two evidence rules) | Sec. 4.7, Fig. 5c |
-| `e11_spectrum.py` | leading eigenvalue of the attractor sub-network, original vs corrected vs random | Sec. 4.4 |
-| `g4_localize.py`, `g1b_precision.py` | exploratory gate analyses (reported in the plans) | -- |
+| `g4_localize.py`, `g1b_precision.py` | exploratory gate analyses (reported in the plans) | Supplement |
 
 Seeds: gate phase 8001-8103 (exploratory); all confirmatory analyses use fresh seeds from 8201 on.
 
