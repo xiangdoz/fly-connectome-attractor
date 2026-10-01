@@ -25,7 +25,7 @@ PARTS = os.path.join("figs", "parts")
 INK, INK2 = RGBColor.from_string(I_HEX[1:]), RGBColor.from_string(I2_HEX[1:])
 ORANGE, BLUE, GREY = RGBColor.from_string(O_HEX[1:]), RGBColor.from_string(B_HEX[1:]), RGBColor(0xCF, 0xCD, 0xC6)
 FONT = "Arial"
-W, H = 7.0, 2.55
+W, H = 7.0, 2.70
 
 
 def parts():
@@ -99,8 +99,8 @@ def node(slide, cx, cy, r, fill, label, label_color=INK, above=False):
     sh.fill.solid(); sh.fill.fore_color.rgb = fill
     sh.line.color.rgb = RGBColor(0xFF, 0xFF, 0xFF); sh.line.width = Pt(0.75)
     sh.shadow.inherit = False
-    ty = cy - r - 0.16 if above else cy + r + 0.02
-    text(slide, cx - 0.4, ty, 0.8, 0.15, label, 6.2, label_color, align=PP_ALIGN.CENTER)
+    ty = cy - r - 0.17 if above else cy + r + 0.02
+    text(slide, cx - 0.4, ty, 0.8, 0.15, label, 6.8, label_color, align=PP_ALIGN.CENTER)
 
 
 def circuit(slide, x0, y0, resigned, mode, wts):
@@ -149,11 +149,11 @@ def main():
     text(s, 1.15, 1.05, 1.0, 0.3, "Jaccard 0.70\n(random sets 0.06)", 6.2, INK2)
     circuit(s, 4.62, 0.55, False, mode, wts)
     circuit(s, 5.86, 0.55, True, mode, wts)
-    text(s, 4.62, 1.86, 1.15, 0.3, "model signs\nλ = %.2f" % e11["original"], 6.4, INK, align=PP_ALIGN.CENTER)
-    text(s, 5.86, 1.86, 1.15, 0.3, "core re-signed\nλ = %.2f" % e11["core_resigned"], 6.4, INK,
+    text(s, 4.62, 1.86, 1.15, 0.3, "model signs\nλ = %.2f" % e11["original"], 7.0, INK, align=PP_ALIGN.CENTER)
+    text(s, 5.86, 1.86, 1.15, 0.3, "core re-signed\nλ = %.2f" % e11["core_resigned"], 7.0, INK,
          align=PP_ALIGN.CENTER)
-    text(s, 4.62, 2.26, 2.36, 0.4, "orange excitatory, blue inhibitory; node area: share of the leading mode; "
-         "edge width: summed weight", 5.8, INK2)
+    text(s, 4.62, 2.26, 2.36, 0.42, "orange excitatory, blue inhibitory\nnode area: share of the leading mode\n"
+         "edge width: summed weight", 6.6, INK2)
     prs.save("fig_wiring.pptx")
     pptx, pdf = os.path.abspath("fig_wiring.pptx"), os.path.abspath(os.path.join("figs", "fig2.pdf"))
     ps = ("$pp = New-Object -ComObject PowerPoint.Application; "
